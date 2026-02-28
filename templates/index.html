@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block title %} Home {% endblock %}
 {% block content %}
-    <div class="hero">
+    <div class="hero my-5">
       <div class="container">
         <div class="row justify-content-between info">
           <div class="col-lg-8">
@@ -27,7 +27,8 @@
           </div>
           <div class="my-skill mt-5">
               <h2 class="title-skill">KỸ NĂNG CỦA TÔI</h2>
-              <p class="text-skill">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque eum, excepturi fuga illum labore nesciunt officiis quae quibusdam tempora! Blanditiis consequatur corporis deserunt eaque earum pariatur praesentium quisquam voluptates!</p>
+              <p class="text-skill">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque eum, excepturi fuga illum labore nesciunt officiis quae quibusdam tempora! Blanditiis consequatur corporis deserunt eaque earum pariatur praesentium quisquam voluptates!</p>
               <div class="skill-items">
                     <p>
                         <span class="skill-name"><i class="fa-brands fa-html5" style="color: rgb(236, 7, 53);"></i> HTML</span>
@@ -38,6 +39,36 @@
                         <span class="skill-name"><i class="fa-brands fa-figma" style="color: rgb(5, 47, 74);"></i> FIGMA</span>
                     </p>
               </div>
+          </div>
+          <div class="form  mt-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="introduce-contact">
+                            <h2>LIÊN HỆ</h2>
+                                <p>
+                                    Bạn có thể liên hệ thắc mắc cho chúng tôi biết về điều gì
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto, atque beatae dicta dolorem dolores eligendi esse id, libero magni minus odit porro qui similique, sunt! Accusantium at consequatur, iusto placeat repudiandae veniam voluptatem. Accusantium delectus eaque eos itaque minus nesciunt placeat quis quos sed sequi. Ad atque magnam similique.
+                                </p>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form form-contact">
+                            <form>
+                                <label for="usrname" class="form-label" >Tên của bạn</label>
+                                 <input type="name" id="usrname" name="usrname" class="form-control">
+                                <label for="usremail" class="form-label" >Email của bạn</label>
+                                 <input type="email" id="usremail" name="usremail" class="form-control">
+                                <label for="usrmess" class="form-label">Lời nhắn</label>
+                                <textarea class="form-control" id="usrmess" rows="10" name="mess"></textarea>
+                            </form>
+                        </div>
+                            <div class="all-btn text-center">
+                                <button class="btn-submit" type="submit"><i class="fa-solid fa-paper-plane" style="color: rgb(255,253,253);"></i> GỬI THÔNG TIN</button>
+                            </div>
+                    </div>
+
+                </div>
           </div>
       </div>
     </div>
