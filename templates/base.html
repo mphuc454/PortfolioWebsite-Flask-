@@ -17,13 +17,14 @@
         <div class="collapse navbar-collapse " id="navbarsFurni">
           <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-auto">
               <li class="d-flex align-items-center">
-                    <a class="nav-link" href="#"><img src= "{{ url_for('static', filename='images/logoLinkedin.png') }}" style="width: 25px" /></a>
-                     <span>LinkedIn</span>
+                    <a class="nav-link linkedin-logo" target="_blank" href="#"><img src= "{{ url_for('static', filename='images/logoLinkedin.png') }}" style="width: 25px" /> LinkedIn </a>
               </li>
               <li class="d-flex align-items-center">
-              <a class="nav-link" href="#"
-                ><img src="{{ url_for('static', filename='images/logofacebook.png') }}" style="width: 25px"/>
-                <span>Facebook</span>
+                    <a class="nav-link github-logo" target="_blank" href="#"><img src="{{ url_for('static', filename='images/logo-github.png') }}" style="width: 25px"/> GitHub </a>
+              </li>
+              <li class="d-flex align-items-center">
+                  <a class="nav-link youtube-logo" target="_blank" href="#"><img src="{{ url_for('static', filename='images/youtube-logo.png') }}" style="width: 25px"/>
+                 Youtube
               </a>
               </li>
           </ul>
@@ -33,9 +34,7 @@
 {% block content %}
 {% endblock %}
 <footer class=" text-center bg-black text-light my-footer ">
-  <div class="text-center p-3">
-    © 2026 Copyright:
-    <a href="#">MPhucDeveloper</a>
+  <div class="text-center p-3 "> <span id="footer-year"></span> Copyright <a href="#">MPhucDeveloper</a>
   </div>
 </footer>
 <script src="{{ url_for('static', filename = 'js/main.js') }}"></script>

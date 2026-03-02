@@ -16,12 +16,12 @@
           </div>
           <div class="col-lg-4">
             <div class="img-wrap">
-              <img src="{{ url_for('static', filename='images/Profile.png') }}" class="img-profile mx-5" alt="Ảnh đại diện" />
+              <img src="{{ url_for('static', filename='images/imgProfile/Profile.png') }}" class="img-profile mx-5"  alt="Ảnh đại diện" />
             </div>
           </div>
         </div>
           <div class="contact-btn">
-              <a href="" class="my-contact"> <i class="fa-solid fa-code icon"></i> Kỹ năng của tôi</a>
+              <a href="{{ url_for('skill') }}" class="my-contact"> <i class="fa-solid fa-code icon"></i> Kỹ năng của tôi</a>
               <a href="" class="my-contact"> <i class="fa-regular fa-envelope icon"></i> Liên hệ </a>
               <a href="" class="my-contact"><i class="fa-regular fa-address-card icon"></i> Tiểu sử</a>
           </div>
@@ -30,14 +30,11 @@
               <p class="text-skill">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque eum, excepturi fuga illum labore nesciunt officiis quae quibusdam tempora! Blanditiis consequatur corporis deserunt eaque earum pariatur praesentium quisquam voluptates!</p>
               <div class="skill-items">
+                  {% for i in context %}
                     <p>
-                        <span class="skill-name"><i class="fa-brands fa-html5" style="color: rgb(236, 7, 53);"></i> HTML</span>
-                        <span class="skill-name"><i class="fa-brands fa-css3-alt" style="color: rgb(78, 20, 244);"></i> CSS</span>
-                        <span class="skill-name"><i class="fa-brands fa-js" style="color: rgb(180, 218, 27);"></i> JAVASCRIPT</span>
-                        <span class="skill-name"><i class="fa-brands fa-python" style="color: rgb(142,94,174);"></i> PYTHON</span>
-                        <span class="skill-name"><i class="fa-solid fa-database" style="color: rgb(5, 69, 117);"></i> SQL</span>
-                        <span class="skill-name"><i class="fa-brands fa-figma" style="color: rgb(5, 47, 74);"></i> FIGMA</span>
+                        <span class="skill-name">{{ i }}</span>
                     </p>
+                  {% endfor %}
               </div>
           </div>
           <div class="form  mt-5">

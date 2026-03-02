@@ -5,8 +5,11 @@
   width: 100%;
 }
 .img-profile{
-  border-radius: 80%;
-  height: 280px;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
 }
 .icon{
   color: #2b0d0d;
@@ -43,9 +46,9 @@
   justify-content: center;
 }
 .skill-name{
-  border: solid 2px #ddcbdd;
+  border: solid 2px #d103d1;
   text-decoration: none;
-  color: #2b0d0d;
+  color: #c11717;
   font-size: 20px ;
   padding: 15px;
   margin-left: 15px ;
