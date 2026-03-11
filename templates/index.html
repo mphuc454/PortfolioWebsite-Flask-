@@ -24,17 +24,7 @@ block content %}
         </div>
       </div>
     </div>
-    <div class="contact-btn">
-      <a href="{{ url_for('skill') }}" class="my-contact">
-        <i class="fa-solid fa-code icon"></i> Kỹ năng của tôi</a
-      >
-      <a href="" class="my-contact">
-        <i class="fa-regular fa-envelope icon"></i> Liên hệ
-      </a>
-      <a href="" class="my-contact"
-        ><i class="fa-regular fa-address-card icon"></i> Tiểu sử</a
-      >
-    </div>
+
     <div class="my-skill mt-5">
       <h2 class="title-skill">KỸ NĂNG CỦA TÔI</h2>
       <p class="text-skill">
@@ -91,18 +81,20 @@ block content %}
                 rows="10"
                 name="mess"
               ></textarea>
-                <div class="all-btn text-center">
-            <button class="btn-submit" type="submit">
-              <i
-                class="fa-solid fa-paper-plane"
-                style="color: rgb(255, 253, 253)"
-              ></i>
-              GỬI THÔNG TIN
-            </button>
-          </div>
+              <div class="all-btn text-center">
+                <button class="btn-submit" type="submit">
+                  <i
+                    class="fa-solid fa-paper-plane"
+                    style="color: rgb(255, 253, 253)"
+                  ></i>
+                  GỬI THÔNG TIN
+                </button>
+              </div>
             </form>
+            {% if err %}
+            <div class="alert alert-danger mt-3">{{ err }}</div>
+            {% endif %}
           </div>
-
         </div>
       </div>
     </div>
