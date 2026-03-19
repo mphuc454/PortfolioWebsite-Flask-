@@ -17,19 +17,19 @@ def load_skills():
 def send_mail(from_email, message):
     SMTP_SERVER = "smtp.gmail.com"
     SMTP_PORT = 587
-    USERNAME = "22130215@st.hcmuaf.edu.vn"
-    PASSWORD = 'wvvt rmmk wyqz hvbr'
+    USERNAME = "Your email"
+    PASSWORD = 'Your password'
 
     body = f"From email: {from_email} \n with Message: {message}"
 
     msg = MIMEText(body)
     msg['Subject'] = f'Send from {from_email}'
     msg['From'] = from_email
-    msg['To'] = "22130215@st.hcmuaf.edu.vn"
+    msg['To'] = "Your email"
     with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
         server.starttls()
         server.login(USERNAME, PASSWORD)
-        server.sendmail(from_email, "22130215@st.hcmuaf.edu.vn", msg.as_string())
+        server.sendmail(from_email, "Your email", msg.as_string())
         
      
 @app.route('/home', methods = ['GET', 'POST'])
@@ -42,7 +42,7 @@ def home():
             message = request.form['mess']
             
             #kiểm tra tính hợp lệ form:
-            if(len(name.strip()) < 2): 
+            if len(name.strip()) < 2:
                  error = "Tên phải lớn hơn hoặc bằng 2 ký tự"
             elif len(message) < 10:
                 error = 'Vui lòng nhập lời nhắn ít nhất 10 từ'
