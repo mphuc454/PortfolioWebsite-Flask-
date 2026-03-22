@@ -51,6 +51,10 @@ def home():
                 return redirect(url_for('home'))
                 
         return render_template('index.html', skills = skills, err = error)
+    
+@app.route('/')
+def introduce():
+    return render_template('introduce.html')
 
 
 if __name__ == '__main__':
